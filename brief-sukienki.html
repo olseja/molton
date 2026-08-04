@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Optymalizacja on-page: Sukienki — Molton</title>
+<style>
+:root{
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --border:rgba(11,11,11,.10); --blue:#2a78d6; --good:#0a7d36; --good-bg:rgba(10,125,54,.08);
+  --bad:#c0392b; --bad-bg:rgba(192,57,43,.07); --warn:#b06a00; --warn-bg:rgba(235,104,52,.10);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
+  --border:rgba(255,255,255,.10); --blue:#3987e5; --good:#3fb56b; --good-bg:rgba(63,181,107,.14);
+  --bad:#e66767; --bad-bg:rgba(230,103,103,.12); --warn:#e0a13a; --warn-bg:rgba(217,89,38,.16);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
+  --border:rgba(255,255,255,.10); --blue:#3987e5; --good:#3fb56b; --good-bg:rgba(63,181,107,.14);
+  --bad:#e66767; --bad-bg:rgba(230,103,103,.12); --warn:#e0a13a; --warn-bg:rgba(217,89,38,.16);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:34px 20px 64px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+h1{font-size:25px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:14px;margin:0}
+h2{font-size:18px;margin:34px 0 8px;letter-spacing:-.01em}
+p.lead{color:var(--ink2);font-size:15px;margin:8px 0 4px}
+.toggle{border:1px solid var(--border);background:var(--surface);color:var(--ink2);border-radius:8px;padding:7px 12px;font-size:13px;cursor:pointer}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.meta .box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.meta .lab{font-size:12px;color:var(--muted);margin-bottom:5px}
+.meta .val{font-size:15px;font-weight:600}
+.score{display:flex;align-items:baseline;gap:8px}
+.score .now{color:var(--bad);font-size:22px;font-weight:700}
+.score .then{color:var(--good);font-size:22px;font-weight:700}
+.score .arr{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+@media(max-width:640px){.ba{grid-template-columns:1fr}}
+.before,.after{border-radius:10px;padding:12px 14px;font-size:14px;border:1px solid var(--border)}
+.before{background:var(--bad-bg);border-left:3px solid var(--bad)}
+.after{background:var(--good-bg);border-left:3px solid var(--good)}
+.tagline{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.before .tagline{color:var(--bad)} .after .tagline{color:var(--good)}
+.flag{background:var(--warn-bg);border:1px solid var(--border);border-left:3px solid var(--warn);border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--ink2);margin-top:10px}
+ul{margin:8px 0;padding-left:20px} li{margin:5px 0;font-size:14px}
+.qa{font-size:14px;margin:8px 0;color:var(--ink2)} .qa b{color:var(--ink)}
+.foot{margin-top:34px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px}
+.plan{background:var(--good-bg);border:1px solid var(--border);border-left:4px solid var(--good);border-radius:12px;padding:6px 18px 16px;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Optymalizacja on-page: kategoria „Sukienki"</h1>
+    <p class="sub">molton.pl/nowa-kolekcja/odziez/sukienki · stan sprawdzony 04.08.2026</p>
+  </div>
+  <button class="toggle" onclick="var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'">tryb jasny / ciemny</button>
+</header>
+
+<h2>Dlaczego to ważne</h2>
+<p class="lead">Kobieta szukająca sukienki na wesele, do pracy czy na wyjście zaczyna zwykle od ogólnego zapytania „sukienki damskie". To hasło ma w danych molton.pl 94 tys. wyświetleń, ale strona kategorii stoi na średniej pozycji ~14 i zbiera 0,25% kliknięć. Popyt jest ogromny, a serwis prawie go nie zamienia na wejścia. Powód: strona kategorii to dziś siatka produktów bez treści, która odpowiadałaby na intencję klientki i którą mógłby zacytować model AI. To najbardziej dochodowy pojedynczy ruch on-page w całym serwisie.</p>
+
+<div class="meta">
+  <div class="box"><div class="lab">Fraza docelowa</div><div class="val">sukienki damskie</div></div>
+  <div class="box"><div class="lab">Intencja</div><div class="val">komercyjna</div></div>
+  <div class="box"><div class="lab">ICP</div><div class="val">kobieta ceniąca jakość i krój, dobiera sukienkę na okazję</div></div>
+  <div class="box"><div class="lab">Ocena on-page</div><div class="val score"><span class="now">45</span><span class="arr">→</span><span class="then">80</span><span style="font-size:12px;color:var(--muted)">/100 po poprawkach</span></div></div>
+</div>
+
+<h2>Frazy docelowe (dane GSC, 16 mies.)</h2>
+<div class="card">
+<table>
+<thead><tr><th>Fraza</th><th class="n">Wyświetlenia</th><th class="n">Pozycja</th><th class="n">CTR</th></tr></thead>
+<tbody>
+<tr><td>sukienki damskie</td><td class="n">94 254</td><td class="n">14,3</td><td class="n">0,25%</td></tr>
+<tr><td>sukienki damskie eleganckie</td><td class="n">10 281</td><td class="n">12,6</td><td class="n">0,47%</td></tr>
+<tr><td>piękne sukienki damskie</td><td class="n">9 986</td><td class="n">9,6</td><td class="n">0,28%</td></tr>
+<tr><td>sukienki wizytowe damskie</td><td class="n">4 153</td><td class="n">12,8</td><td class="n">0,43%</td></tr>
+<tr><td>markowe sukienki wyprzedaż</td><td class="n">4 568</td><td class="n">4,4</td><td class="n">5,23%</td></tr>
+<tr><td>eleganckie sukienki letnie</td><td class="n">3 463</td><td class="n">12,9</td><td class="n">2,80%</td></tr>
+<tr><td>sukienka z gipiury</td><td class="n">3 768</td><td class="n">3,8</td><td class="n">1,30%</td></tr>
+<tr><td>sukienki wizytowe</td><td class="n">3 259</td><td class="n">52,8</td><td class="n">0,21%</td></tr>
+</tbody>
+</table>
+<p style="font-size:13px;color:var(--ink2);margin:10px 2px 0">Cała rodzina fraz dresowych spoza marki to ok. 298 tys. wyświetleń przy zaledwie 2,5 tys. kliknięć. Przy większości jesteśmy na 1.–2. stronie, ale bez treści dopasowanej do intencji nie wygrywamy kliknięcia.</p>
+</div>
+
+<h2>Warstwa AI (priorytet)</h2>
+<div class="card">
+<ul>
+<li><b>Struktura pytanie → odpowiedź:</b> dziś jej nie ma. Dodać krótki blok tekstowy wokół realnych pytań klientki (jaka na wesele, jaka do pracy, jakie materiały), pierwsze zdanie każdej sekcji zwięzłe i cytowalne. To wsad, po który sięga Google AI Overview i ChatGPT.</li>
+<li><b>FAQ pod AI:</b> obecne FAQ dotyczy „Jak działa lista zakupowa", czyli funkcji sklepu, nie sukienek. Dodać FAQ intencyjne (propozycje niżej) i podpiąć schema FAQPage.</li>
+<li><b>E-E-A-T:</b> sygnały zaufania są (telefon, e-mail, darmowa dostawa, 14 dni na zwrot). Dodać warstwę ekspercką: krótką notę o własnej produkcji i materiałach oraz link do informacji o marce i salonach.</li>
+</ul>
+</div>
+
+<h2>Poprawki gotowe do wdrożenia</h2>
+
+<h3 style="font-size:15px;margin:16px 0 2px">Title</h3>
+<div class="ba">
+<div class="before"><div class="tagline">Przed</div>Sukienki damskie na jesień 2026 | MOLTON</div>
+<div class="after"><div class="tagline">Po</div>Sukienki damskie – nowa kolekcja i klasyka | Molton</div>
+</div>
+<p style="font-size:13px;color:var(--ink2);margin:8px 2px 0">Fraza „sukienki damskie" zostaje z przodu, ale zdejmujemy zawężenie sezonowe. Money-fraza jest całoroczna, a człon „na jesień 2026" wymaga comiesięcznej podmiany i osłabia dopasowanie poza sezonem.</p>
+
+<h3 style="font-size:15px;margin:18px 0 2px">Meta description</h3>
+<div class="ba">
+<div class="before"><div class="tagline">Przed</div>Wybierz perfekcyjny kój na spotkanie lub wieczorne wyjście – nasze sukienki damskie z jesiennej kolekcji zachwycają miękkością materiałów i krojem, który dotrzymuje Ci kroku.</div>
+<div class="after"><div class="tagline">Po</div>Sukienki damskie na wesele, do pracy i na co dzień. Polska produkcja, dopracowane kroje i materiały, które trzymają fason. Zobacz nową kolekcję i sprawdzone klasyki.</div>
+</div>
+<div class="flag"><b>Do natychmiastowej poprawki:</b> w obecnej metadescription jest literówka „perfekcyjny kój" zamiast „krój". Warto poprawić niezależnie od reszty prac.</div>
+
+<h3 style="font-size:15px;margin:18px 0 2px">H1 i nagłówki</h3>
+<div class="card">
+<p style="margin:0 0 8px;font-size:14px"><b>H1:</b> zmiana z ogólnego „Sukienki" na <b>„Sukienki damskie"</b> (pokrycie money-frazy, jeden jasny H1).</p>
+<p style="margin:0 0 6px;font-size:14px"><b>H2 do bloku treści</b> (pod siatką produktów, żeby nie zaburzać zakupów):</p>
+<ul>
+<li>Jak wybrać sukienkę na wesele</li>
+<li>Sukienki do pracy i na co dzień</li>
+<li>Materiały i kroje, które trzymają fason</li>
+<li>Sukienki wizytowe i na wieczór</li>
+</ul>
+</div>
+
+<h3 style="font-size:15px;margin:18px 0 2px">Treść kategorii (najważniejszy element)</h3>
+<div class="card">
+<p style="margin:0;font-size:14px">Dodać na dole kategorii blok opisowy (ok. 300–500 słów) w języku marki, bez słowa „elegancja". Struktura pytanie → odpowiedź, pierwsze zdanie każdej sekcji zwięzłe i cytowalne. Pokryć podtematy z rodziny fraz: sukienki na wesele, wizytowe, do pracy, letnie, z gipiury, midi, dobór do figury, materiały (wiskoza, jedwab, len). Frazy wplatać naturalnie, bez upychania. Akcent na jakość, ponadczasowość i polską produkcję.</p>
+</div>
+
+<h3 style="font-size:15px;margin:18px 0 2px">FAQ intencyjne (pod AI + schema FAQPage)</h3>
+<div class="card">
+<div class="qa"><b>Jaką sukienkę wybrać na wesele?</b> fasony, długości i materiały pod sezon</div>
+<div class="qa"><b>Jaka sukienka sprawdzi się do pracy?</b> proste kroje, tkaniny niegniotące, wersje na co dzień i do biura</div>
+<div class="qa"><b>Z jakich materiałów szyte są sukienki Molton?</b> wiskoza, jedwab, len, dzianina; polska produkcja</div>
+<div class="qa"><b>Jak dobrać rozmiar sukienki?</b> odesłanie do tabeli rozmiarów i zasad doboru</div>
+<div class="qa"><b>Czy sukienki można zwrócić?</b> 14 dni na zwrot, zasady</div>
+</div>
+
+<h3 style="font-size:15px;margin:18px 0 2px">Dane strukturalne i linkowanie</h3>
+<div class="card">
+<ul>
+<li><b>Schema:</b> FAQPage (dla nowego FAQ), BreadcrumbList (ścieżka), ItemList/Product (siatka). Zwiększa szansę na rich results i cytowanie w AI.</li>
+<li><b>Linki wewnętrzne:</b> z bloku treści opisowymi anchorami do „sukienki na wesele", „sukienki wizytowe", „sukienki wieczorowe", „sukienki w outlecie" oraz do strony o marce i salonów. Minimum 4–5 linków.</li>
+</ul>
+</div>
+
+<h3 style="font-size:15px;margin:18px 0 2px">Konsolidacja adresów (do sprawdzenia z zespołem technicznym)</h3>
+<div class="card">
+<p style="margin:0;font-size:14px">Stare adresy (sukienki-229, 686, 238, 411, 402) kanonikalizują się do /nowa-kolekcja/odziez/sukienki, co jest dobre. Warto potwierdzić, że linki wewnętrzne i mapa strony wskazują kanoniczny URL, a stare adresy oddają 301 lub spójny canonical. Adres sukienki-229 wciąż zbiera ok. 1,14 mln wyświetleń na pozycji ~29, więc autorytet rozmywa się na starym URL-u zamiast koncentrować na kanonicznym.</p>
+</div>
+
+<div class="plan">
+<h2 style="margin-top:16px">Plan iteracji (Test, learn, GROW)</h2>
+<ul>
+<li><b>Test (2–4 tyg.):</b> wdrożyć nowy title, poprawioną metadescription (w tym literówka), H1 „Sukienki damskie", blok treści z FAQ intencyjnym i schema FAQPage.</li>
+<li><b>Learn:</b> mierzyć w GSC pozycję i CTR rodziny fraz dresowych, cytowania w Google AI Overview oraz konwersję kategorii. Hipoteza: pozycja na „sukienki damskie" rośnie z ~14 w stronę TOP 10, CTR w górę, wejście do AI Overviews na pytania typu „jaka sukienka na wesele".</li>
+<li><b>Grow:</b> po potwierdzeniu przenieść ten sam schemat (blok treści + FAQ intencyjne + schema) na kolejne money-kategorie: garnitury damskie, płaszcze wełniane, apaszki jedwabne.</li>
+</ul>
+</div>
+
+<div class="foot">Źródło danych: Google Search Console (molton.pl). Stan strony sprawdzony 4 sierpnia 2026.</div>
+
+</div>
+</body>
+</html>
