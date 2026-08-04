@@ -2,13 +2,13 @@
 <html lang="pl" data-theme="">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Molton SEO — baseline widoczności w Google (GSC)</title>
+<title>Molton — widoczność w wyszukiwarce i AI</title><meta name="robots" content="noindex, nofollow">
 <style>
 :root {
   --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
   --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
   --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
-  --hot-bg:rgba(235,104,52,.10); --good:#006300; --warn:#b06a00;
+  --hot-bg:rgba(235,104,52,.10); --good:#006300; --warn:#b06a00; --ai:#4a3aa7; --ai-bg:rgba(74,58,167,.09); --act:#0a7d36; --act-bg:rgba(10,125,54,.08);
   color-scheme:light;
 }
 :root[data-theme="dark"], :root:where(:not([data-theme="light"])) {
@@ -18,7 +18,7 @@
     --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
     --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
     --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
-    --hot-bg:rgba(217,89,38,.16); --good:#0ca30c; --warn:#e0a13a;
+    --hot-bg:rgba(217,89,38,.16); --good:#0ca30c; --warn:#e0a13a; --ai:#9085e9; --ai-bg:rgba(144,133,233,.16); --act:#3fb56b; --act-bg:rgba(63,181,107,.16);
     color-scheme:dark;
   }
 }
@@ -67,30 +67,47 @@ tr.hot{background:var(--hot-bg)}
 .stack div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:600}
 .note{font-size:13px;color:var(--ink2);background:var(--surface);border:1px solid var(--border);
   border-left:3px solid var(--series-2);border-radius:8px;padding:12px 14px;margin-top:12px}
+.ai-block{background:var(--ai-bg);border:1px solid var(--border);border-left:4px solid var(--ai);border-radius:14px;padding:4px 18px 18px;margin-top:28px}
+.ai-block h2{margin-top:22px}
+.badge-ai{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--ai);padding:3px 9px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.note.ai{border-left-color:var(--ai)}
+.act-block{background:var(--act-bg);border:1px solid var(--border);border-left:4px solid var(--act);border-radius:14px;padding:4px 18px 18px;margin-top:28px}
+.act-block h2{margin-top:22px}
+.badge-act{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--act);padding:3px 9px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.act-list{list-style:none;margin:4px 0 0;padding:0;counter-reset:a}
+.act-list li{padding:11px 0 11px 34px;border-bottom:1px solid var(--border);font-size:14px;position:relative}
+.act-list li:last-child{border-bottom:none}
+.act-list li::before{counter-increment:a;content:counter(a);position:absolute;left:0;top:11px;width:22px;height:22px;border-radius:50%;background:var(--act);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.act-list b{color:var(--ink)}
+.act-list .why{color:var(--ink2);font-size:13px}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:720px){.cols{grid-template-columns:1fr}}
 .foot{margin-top:36px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
 .foot b{color:var(--ink2)}
 .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
 .tag{font-size:12px;padding:3px 9px;border-radius:20px;border:1px solid var(--border);color:var(--ink2)}
+.defs{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:13px;color:var(--ink2);line-height:1.45}
+.defs b{color:var(--ink)}
+@media(max-width:720px){.defs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <div>
-    <h1>Molton — widoczność w Google (SEO)</h1>
-    <p class="sub">Punkt wyjścia projektu · dane z Google Search Console · zakres 04.2025–07.2026 · snapshot 04.08.2026</p>
+    <h1>Molton — widoczność w Google i AI (SEO + GEO)</h1>
+    <p class="sub">Widoczność w Google (Search Console, 04.2025–07.2026) i w AI · stan na 08.2026</p>
   </div>
   <button class="toggle" onclick="var r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'">tryb jasny / ciemny</button>
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="lab">Kliknięcia / mies. (lipiec)</div><div class="val">15 753</div><div class="delta down">−4 160 vs maj</div></div>
-  <div class="kpi"><div class="lab">Śr. pozycja (lipiec)</div><div class="val">9,85</div><div class="delta up">↑ o 1,39 poz. vs maj</div></div>
+  <div class="kpi"><div class="lab">Kliknięcia / mies. (lipiec)</div><div class="val">15 753</div><div class="delta up">+155 vs czerwiec</div></div>
+  <div class="kpi"><div class="lab">Śr. pozycja (lipiec)</div><div class="val">9,85</div><div class="delta up">↑ o 0,51 poz. vs czerwiec</div></div>
   <div class="kpi"><div class="lab">Ruch non-brand (3 mies.)</div><div class="val">29,1%</div><div class="delta">≈ 14 922 klików spoza marki</div></div>
   <div class="kpi"><div class="lab">Długi ogon fraz</div><div class="val">+1 182</div><div class="delta">nowych fraz z eksportów miesięcznych</div></div>
 </div>
+<div class="card" style="margin-top:18px"><div class="tick" style="color:var(--ink2);font-size:13px;margin-bottom:10px">Jak czytać te dane</div><div class="defs"><div><b>Pozycja</b> — średnie miejsce strony w Google; im niższa liczba, tym wyżej (1 = szczyt).</div><div><b>Wyświetlenia</b> — ile razy strona pokazała się w wynikach wyszukiwania.</div><div><b>CTR</b> — odsetek osób, które kliknęły po zobaczeniu wyniku.</div><div><b>Brand / non-brand</b> — brand to wyszukiwania z nazwą „Molton"; non-brand to zapytania bez marki, np. „sukienki na wesele".</div><div><b>Widoczność w AI (GEO)</b> — czy modele AI (ChatGPT, Perplexity, Google AI Overview) wymieniają markę, gdy ktoś pyta o kategorię.</div><div><b>Google AI Overview</b> — odpowiedź generowana przez AI na górze wyników Google, często bez wejścia na stronę.</div></div></div>
 
 <h2>Pozycja w czasie <span class="hint">— średnia krocząca 7-dniowa, niżej = lepiej</span></h2>
 <p class="lead">Widoczność mocno urosła: ze średniej pozycji ~23 wiosną 2025 do ~9–10 w połowie 2026. Skok nastąpił około września 2025 i od tego czasu pozycja trzyma się jednocyfrowo.</p>
@@ -117,6 +134,20 @@ tr.hot{background:var(--hot-bg)}
   <div class="stack"><div style="width:70.9%;background:var(--series-1)">70,9%</div><div style="width:29.1%;background:var(--series-2)">29,1%</div></div>
 </div>
 
+<div class="ai-block">
+<h2>Widoczność w AI (GEO) <span class="badge-ai">AI · nie Google Search</span></h2>
+<p class="lead">Uwaga: to osobny obszar niż wyniki Google powyżej. Mierzy, czy modele AI (ChatGPT, Perplexity, Google AI Overview) cytują Molton, gdy klientka pyta bez wpisywania marki. Część ruchu z Google przechwytuje dziś warstwa AI, zanim klientka trafi na stronę, więc śledzimy to co 2 tygodnie razem z SEO. Dane GEO z raportów miesięcznych.</p>
+<div class="kpis">
+  <div class="kpi"><div class="lab">Ocena AI Visibility</div><div class="val">58/100</div><div class="delta">rozpoznawalność marki mocna, odkrywalność w kategorii słaba</div></div>
+  <div class="kpi"><div class="lab">Cytowania w Google AI Overview (czerwiec)</div><div class="val">49</div><div class="delta up">trend rosnący (Senuto)</div></div>
+</div>
+<div class="card">
+  <div class="tick" style="margin-bottom:10px;color:var(--ink2);font-size:13px">Frazy z cytowaniem w AI · maj 2026 · zmiana m/m (Ahrefs)</div>
+  <div style="display:flex;align-items:center;gap:12px;margin:9px 0"><div style="width:160px;font-size:13px">ChatGPT</div><div style="flex:1;background:var(--grid);border-radius:5px;height:22px"><div style="width:100%;background:var(--ai);height:100%;border-radius:5px"></div></div><div style="width:120px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums">60 fraz <span style="color:var(--good)">+19</span></div></div><div style="display:flex;align-items:center;gap:12px;margin:9px 0"><div style="width:160px;font-size:13px">Perplexity</div><div style="flex:1;background:var(--grid);border-radius:5px;height:22px"><div style="width:32%;background:var(--ai);height:100%;border-radius:5px"></div></div><div style="width:120px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums">19 fraz <span style="color:var(--series-2)">−1</span></div></div><div style="display:flex;align-items:center;gap:12px;margin:9px 0"><div style="width:160px;font-size:13px">Google AI Overviews</div><div style="flex:1;background:var(--grid);border-radius:5px;height:22px"><div style="width:12%;background:var(--ai);height:100%;border-radius:5px"></div></div><div style="width:120px;text-align:right;font-size:13px;font-variant-numeric:tabular-nums">7 fraz <span style="color:var(--good)">+2</span></div></div>
+</div>
+<div class="note ai"><b>Sedno GEO:</b> cytowania napędzają pytania brandowe („co to za marka Molton", „czy polska firma") i lokalne (salony, outlety), nie discovery kategoryjne (sukienki, garnitury, płaszcze). Molton jest znany z nazwy, ale przegrywa moment wyboru w kategorii.</div>
+</div>
+
 <h2>Najważniejsze strony <span class="hint">— 16 mies., 🔴 = duży zasięg przy słabej pozycji</span></h2>
 <p class="lead">Sztandarowa okazja: kategoria sukienek ma ponad milion wyświetleń przy średniej pozycji ~29. Ogromny popyt, którego serwis nie zamienia na wejścia — najbardziej dochodowy cel optymalizacji on-page.</p>
 <div class="card">
@@ -126,7 +157,7 @@ tr.hot{background:var(--hot-bg)}
 </table>
 </div>
 
-<h2>Okazje non-brand — kategorie produktowe <span class="hint">— kandydaci do walidacji, 3 mies.</span></h2>
+<h2>Kategorie o wysokim potencjale <span class="hint">— duży zasięg, jest co poprawić</span></h2>
 <p class="lead">Frazy generyczne z dużym zasięgiem i pozycją 5–10, ale niemal zerowym CTR: Molton jest technicznie na 1.–2. stronie przez listingi produktowe, lecz nie wygrywa kliknięcia. To główne pole do pracy on-page.</p>
 <div class="card">
 <table>
@@ -137,7 +168,7 @@ tr.hot{background:var(--hot-bg)}
 
 <div class="cols">
 <div>
-<h2>Klaster lokalny (salony) <span class="hint">— odrębny kubełek</span></h2>
+<h2>Klaster lokalny (salony) <span class="hint">— salony i outlety</span></h2>
 <div class="card">
 <table>
 <thead><tr><th>Fraza</th><th class="n">Klik.</th><th class="n">Poz.</th></tr></thead>
@@ -160,11 +191,26 @@ tr.hot{background:var(--hot-bg)}
 </div>
 </div>
 
-<div class="note"><b>Do wykluczenia z celów:</b> część grubych fraz non-brand to nawigacja do galerii i outletów, nie popyt na produkty Moltona — ich nie ścigamy w SEO. Przykłady: fashion house, factory ursus, factory annopol, designer outlet piaseczno, outlet piaseczno, piaseczno outlet.</div>
+
+
+<div class="act-block">
+<h2>Rekomendowane działania <span class="badge-act">Plan</span> <span class="hint">— od największego potencjału</span></h2>
+<p class="lead">Mamy komplet danych, czas na ruch. Priorytety wynikające wprost z liczb powyżej:</p>
+<div class="card">
+<ol class="act-list">
+<li><b>Kategoria „sukienki" — optymalizacja on-page.</b> <span class="why">Ponad milion wyświetleń przy średniej pozycji ~29. Największy pojedynczy potencjał w Google: poprawa treści i struktury tej kategorii.</span></li>
+<li><b>Kategorie z dużym zasięgiem, a niskim CTR.</b> <span class="why">Kombinezony, trencze, płaszcze wełniane, torebki, apaszki są na 1.–2. stronie, ale nie wygrywają kliknięcia. Lepsze tytuły, opisy i treść zamienią wyświetlenia na wejścia.</span></li>
+<li><b>Widoczność w AI — wejście do zewnętrznych zestawień.</b> <span class="why">AI buduje rekomendacje kategoryjne z list „polskie marki premium". Obecność w nich plus treści porównawcze sprawią, że AI zacznie polecać Molton, nie tylko go rozpoznawać.</span></li>
+<li><b>Nowy język marki w treściach.</b> <span class="why">AI wciąż opisuje markę słowem „elegancja". Treści w nowym języku (jakość, ponadczasowość, materiały) przesuną ten obraz za komunikacją marki.</span></li>
+<li><b>Desktop — diagnoza techniczna.</b> <span class="why">Pozycja na komputerach jest dużo słabsza niż na mobile. Warto sprawdzić przyczyny techniczne i UX.</span></li>
+<li><b>Pomiar co 2 tygodnie.</b> <span class="why">Odświeżanie tego panelu (Google i AI) pokaże, czy działania przekładają się na widoczność.</span></li>
+</ol>
+</div>
+</div>
 
 <div class="foot">
-<p><b>Jak czytać i odświeżać.</b> Ten panel to stan startowy. Co miesiąc dokładamy świeży eksport z GSC (Skuteczność → Wyniki wyszukiwania → Eksportuj), a ja przeliczam trend. Pozycję i CTR liczę ważone wyświetleniami (nie uśredniam między plikami), kliknięcia i wyświetlenia sumuję.</p>
-<p><b>Ograniczenia danych.</b> Zakładka „Zapytania" w GSC jest ucięta do 1000 wierszy na eksport, więc długi ogon jest częściowo przycięty — dlatego robimy eksporty miesięczne (każdy daje świeże 1000 fraz; łącznie +1 182 fraz ponad 16-mies. czołówkę). To snapshot z 04.08.2026, nie dane na żywo. Docelowo pełne dane bez limitu dałby eksport GSC → BigQuery. Klastry (kategoria / lokalne / szum) przypisane heurystycznie — do weryfikacji ręcznej.</p>
+
+<p>Dane: Google Search Console (widoczność w Google) oraz raporty miesięczne SEO i AI (widoczność w AI). Pozycja i CTR ważone liczbą wyświetleń.</p>
 <p style="margin-top:10px">16 mies. łącznie: 337 308 klików · 11 235 124 wyświetleń · śr. pozycja 19,19 · CTR 3,00%. Źródło: Google Search Console (molton.pl, typ „Sieć").</p>
 </div>
 
